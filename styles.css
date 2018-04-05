@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.map-wrapper {
+  position: relative;
+}
+
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#legend {
+  background: white;
+  padding: 30px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 250px;
+  z-index: 2000;
+}
+
+.legend-header{
+  color:orange;
+  font-family:helvetica;
+  font-size:30px;
+  font-weight:bold;
+}  
+.legend-intro{
+  font-family:helvetica;
+  font-size:12px;
+}
