@@ -1,31 +1,118 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Single layer | CARTO</title>
+    <title>REC Democracy Project</title>
     <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
-    
-    
+    <meta charset="utf-8"> 
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Josefin Sans">
     <!-- Load Leaflet CSS -->
     <link href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" rel="stylesheet">
     
     <!-- Load our styles -->
     <link href="./styles.css" rel="stylesheet">
   </head>
-  <body>
-    <div id="map"></div>
-      <div class="map-wrapper">
-      <div id="legend">
-        <div class="legend-header">
-          REC Democracy Project
-        </div>
-        <div>
-          <span class="legend-intro"></span> Since their incorporation in 1939, Black Warrior Electric Member Corporation has systematically oppressed the west Alabama community. While technically a cooperative, they opperate like a private company and have targeted poor families by keeping them economically suppressed and politically intimidated. REC Democracy Project is an organizing campaign to democratize the Black Warrior EMC. Part of their campaign is to make data more visible through mapping. 
-          <br> <br>
-          This map shows the portion of income that the poorest households (people making less than 50% of the federal poverty level) spend on energy. Low-income households have a disproportionate energy burden.
-        </div>
-      </div>
+  
+  
+    <body>
+    <div class="map-wrapper">
+      <div id="map"></div>
+      
     </div>
+
+    <div class="left-sidebar" style="height: 686px;">
+    
+    <p class="title">
+        REC Democracy Project </p>
+      <p class ="subtitle">
+        Black Warrior EMC is an electric cooperative serving 12 counties in Western Alabama. Every household that receives energy from BWEMC 
+        is technically a co-op member-owner. However, BWEMC's board of trustees have been operating the company as a private monopoly rather than a
+        democratic consumer co-op that prioritizes the needs of its member-owners. BWEMC member-owners face exorbitantly high 
+        electricity bills, lack of transparency, information and democracy from the board of trustees as well as race and class discrimination. REC Democracy Project
+        is a grassroots organizing campaign educating and mobilizing BWEMC member-owners to take back control of their co-op. A key part of their campaign
+        is to make data more visible through mapping. 
+      </p>
+    
+      <p class ="subtitle-charact">
+    National Characteristics
+  </p>
+  <label class="radios-orange"> Energy Burden
+  <input type="radio" value="Energy" name="checkedlayer" class="energy-Radio" checked="checked">
+    <span class="checkmark-orange"></span>
+</label> 
+      <label class="radios-orange"> Electric Cooperatives
+  <input type="radio" value="Coop" name="checkedlayer" class="coop-Radio">
+    <span class="checkmark-orange"></span>
+</label> 
+       <p class ="subtitle-charact">
+    Alabama Demographics by County
+  </p>
+    <label class="radios-orange">Median Income
+ <input type="radio" value="Income" name="checkedlayer" class="income-Radio">
+      <span class="checkmark-orange"></span>
+</label>
+      <label class="radios-orange">Race
+  <input type="radio" value= "Race" name="checkedlayer" class="race-Radio" >
+        <span class="checkmark-orange"></span>
+</label>   
+      <p class ="subtitle-charact">
+    Black Warrior Electric Territory
+  </p>
+     <label class="radios-orange">Black Warrior Service Area
+ <input type="radio" value="BWEMC" name="checkedlayer" class="BWEMC-Radio">
+      <span class="checkmark-orange"></span>
+</label>
+    <label class="checkbox-purple">Co-op Members
+  <input type="checkbox" name="checkedlayer" class="Member-checkbox" >
+  <span class="checkmark-purple"></span>
+</label>
+      
+       <label class="checkbox-blue">Churches
+  <input type="checkbox" name="checkedlayer" class="Church-checkbox" >
+  <span class="checkmark-blue"></span>
+</label>
+      
+ 
+  
+
+   
+<div class="sidebar">
+  <a aria-label="close" class="panel-close">×</a>
+  
+  <button class="sidebar-button">
+ <div style="font-size:2em; color: purple">
+
+</div>
+  </button>
+  
+
+  
+  <div class="sidebar-content">
+    <h2> Energy Burden is the percent of income that the poorest households - those making 50% below the federal poverty line -
+         owe in electric bills each year. An affordable energy bill is considered to be 6% of income by economists. On average,
+        low-income Alabama residents owe over half their annual income in energy bills, which contributes to chronic poverty and homelessness. 
+    </h2>
+    
+   <div class="legend">
+      <img src="https://cdn.glitch.com/206e896a-4403-4c86-83b4-925e7a41c1f0%2FScreen%20Shot%202018-05-16%20at%201.25.44%20AM.png?1526448485836">
+    </div>
+      
+    
+        
+        <!-- We create a div where the feature data will go when clicked on: -->
+        <div class="sidebar-feature-content"></div>
+        
+        <div class="sidebar-footer">
+          
+        <h4> Source:  <a href="http://insideenergy.org/2016/05/08/high-utility-costs-force-hard-decisions-for-the-poor/">Inside Energy </a>
+    </h4>
+        </div>
+  </div>
+  
+      </div>
+      
+      
+  
     
     <!-- Load Leaflet and Carto libraries -->
     <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
